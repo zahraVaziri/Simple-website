@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import './App.css'
+import Search from "./common/Search/Search";
+import Filter from "./component/Filter/Filter";
+import NavBar from "./component/NavBar/NavBar";
+import ProductPrvider from "./component/provider/ProductProvider";
+import ProductList from "./ProductList/ProductList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App =()=>{
+  
+    return(
+        <div className="container">
+
+        <ProductPrvider>
+        <NavBar/>
+        <Filter/>
+        <ProductList /> 
+        </ProductPrvider>
+        </div>
+    )
+  
 }
 
 export default App;
